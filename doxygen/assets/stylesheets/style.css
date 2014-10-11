@@ -1,7 +1,9 @@
 /* The standard CSS for doxygen 1.8.8 */
 
 body, table, div, p, dl {
-	font: 400 14px/22px Roboto,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  font-family:'Open Sans',"Trebuchet MS",Helvetica,sans-serif;
 }
 
 /* @group Heading Levels */
@@ -11,8 +13,8 @@ h1.groupheader {
 }
 
 .title {
-	font: 400 14px/28px Roboto,sans-serif;
-	font-size: 150%;
+  font-family:'Open Sans',"Trebuchet MS",Helvetica,sans-serif;
+	font-size: 1.6em;
 	font-weight: bold;
 	margin: 10px 2px;
 }
@@ -33,17 +35,43 @@ h3.groupheader {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	-webkit-transition: text-shadow 0.5s linear;
-	-moz-transition: text-shadow 0.5s linear;
-	-ms-transition: text-shadow 0.5s linear;
-	-o-transition: text-shadow 0.5s linear;
-	transition: text-shadow 0.5s linear;
-	margin-right: 15px;
+  margin: 1.3em 0 1em;
+  padding: 0;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.6em;
+  border-bottom: 1px solid #ddd;
+}
+
+h2 {
+  font-size: 1.4em;
+  border-bottom: 1px solid #eee;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 1em;
+  color: #777;
 }
 
 h1.glow, h2.glow, h3.glow, h4.glow, h5.glow, h6.glow {
 	text-shadow: 0 0 15px cyan;
 }
+
+
 
 dt {
 	font-weight: bold;
@@ -173,6 +201,7 @@ pre.fragment {
 }
 
 div.fragment {
+   font-family: Consolas, Inconsolata, Courier, monospace;
         padding: 4px 6px;
         margin: 4px 8px 4px 2px;
 	background-color: #FBFCFD;
@@ -180,7 +209,7 @@ div.fragment {
 }
 
 div.line {
-	font-family: monospace, fixed;
+	font-family: Consolas, Inconsolata, Courier, monospace;
         font-size: 13px;
 	min-height: 13px;
 	line-height: 1.0;
@@ -608,7 +637,9 @@ dl.reflist dd {
 	font-style: normal;
 }
 .paramname code {
+
         line-height: 14px;
+
 }
 
 .params, .retval, .exception, .tparams {
@@ -803,7 +834,8 @@ div.directory {
 }
 
 table.directory {
-    font: 400 14px Roboto,sans-serif;
+     font-family:'Open Sans',"Trebuchet MS",Helvetica,sans-serif;
+     font-weight: 400;
 }
 
 /* @end */
@@ -824,23 +856,45 @@ address {
 }
 
 table.doxtable {
-	border-collapse:collapse;
-        margin-top: 4px;
-        margin-bottom: 4px;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+  font: inherit;
+  border: 0;
 }
 
-table.doxtable td, table.doxtable th {
-	border: 1px solid #2D4068;
-	padding: 3px 7px 2px;
+table.doxtable tbody {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-table.doxtable th {
-	background-color: #374F7F;
-	color: #FFFFFF;
-	font-size: 110%;
-	padding-bottom: 4px;
-	padding-top: 5px;
+table.doxtable tr {
+  border: 0;
+  border-top: 1px solid #CCC;
+  background-color: white;
+  margin: 0;
+  padding: 0;
 }
+
+table.doxtable tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+
+table.doxtable tr th, table.doxtable tr td {
+  font-size: 1em;
+  border: 1px solid #CCC;
+  margin: 0;
+  padding: 0.5em 1em;
+}
+
+table.doxtable tr th {
+ font-weight: bold;
+  background-color: #F0F0F0;
+  color: #000;
+}
+
 
 table.fieldtable {
         /*width: 100%;*/
@@ -981,6 +1035,7 @@ div.summary
 	padding-right: 5px;
 	width: 50%;
 	text-align: right;
+   font-family:'Open Sans',"Trebuchet MS",Helvetica,sans-serif;
 }       
 
 div.summary a
@@ -1438,3 +1493,12 @@ tr.heading h2 {
   }
 }
 
+body {
+  position: relative;
+}
+
+div#nav_tree {
+  position: absolute;
+  float: right;
+
+}
